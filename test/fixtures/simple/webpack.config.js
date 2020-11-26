@@ -1,9 +1,6 @@
-'use strict'
-
-const path = require('path')
-const webpack = require('webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssUrlRelativePlugin = require('../../..')
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssUrlRelativePlugin = require('../../..');
 
 module.exports = {
   mode: 'development',
@@ -12,6 +9,7 @@ module.exports = {
     'page/index': path.join(__dirname, 'src/page/index.css')
   },
   output: {
+    publicPath: '',
     path: path.join(__dirname, 'dist')
   },
   module: {
@@ -34,8 +32,8 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      name: '[name].css'
+      filename: '[name].css'
     }),
     new CssUrlRelativePlugin()
   ]
-}
+};

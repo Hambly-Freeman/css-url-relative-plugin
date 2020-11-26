@@ -1,6 +1,8 @@
 # css-url-relative-plugin
 
-Webpack plugin to convert css url(...) to relative path (only support webpack 4).
+Credit to yibn2008 for the original library of which this is a fork.
+
+Webpack plugin to convert css url(...) to relative path (supports Webpack 5 only).
 
 This plugin aim to solve the problem that webpack generate incorrect relative path when your publicPath is empty (defaults to `''`) or `'./'`, it will replace incorrect path in css `url(...)`s with correct relative path at end of webpack compilation process.
 
